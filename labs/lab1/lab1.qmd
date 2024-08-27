@@ -1,0 +1,9 @@
+---
+title: "FPGA and MCU Setup and Testing"
+description: "Lab 1"
+author: "Luke Summers"
+date: "8/27/24"
+categories:
+  - labreport
+draft: false
+---

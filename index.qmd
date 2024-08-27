@@ -1,0 +1,17 @@
+---
+title: "E155 Portfolio"
+image: images/headshot.jpg
+about:
+    template: jolla
+    links:
+        - icon: linkedin
+          text: LinkedIn
+          href: www.linkedin.com/in/luke-summers-370075251
+        - icon: github
+          text: Github
+          href: https://github.com/lukesummers-20
+---
+
+Luke Summers is a fourth year computer science major at Harvey Mudd College. 
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
