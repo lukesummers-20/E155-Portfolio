@@ -1,10 +1,12 @@
 ---
-title: "Hello Quarto"
-description: "Welcome to my Quarto portfolio"
+title: "Week 1"
+description: "First week reflection"
 author: "Luke Summers"
-date: "8/27/24"
+date: "9/6/24"
 categories:
   - reflection
 draft: false
 ---
-Hello world
+I found the first two weeks of review to be a nice refresher on the concepts I would need for the course. I think the biggest thing I needed some refreshers on were systemverilog syntax as it had been a while since I had used it. Early on in the lab, I ran into some struggles around this as I did not realize how much I had forgotten. I was forced to spend time re-familiarizing myself with verilog procedures and ididoms. This made me glad as after this lab I have now reinforced what I learned in E85, and moving forward I will be able to further expand this knowledge. 
+
+Another thing I found myself struggling with was the software used to develope our desings. In addition to forgetting some verilog, I also forgot a lot of the steps needed in order to do something like configure a design onto a chip or test a design in simulation. Some of the issues centered around needing to download and install the right packages and drivers, but this was something I was glad to do. I am not sure why I have always enjoyed trying to figure out non coding problems when running something, so I was glad to further widen my knowledge on various developement softwares.
