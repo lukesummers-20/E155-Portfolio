@@ -39,7 +39,7 @@
     "href": "labs/lab1/lab1.html#technical-documentation",
     "title": "Lab 1:FPGA and MCU Setup and Testing",
     "section": "Technical Documentation:",
-    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nFigure 1: Block Diagram\n Figure 1 showcases the design implimented on the FPGA, with the lab1 module containing the oscillator and seven segment display logic modules.\n\n\nFigure 2: Schematic\n Figure 2 shows the circuit for the lab. The LEDs were connected to current limiting resistors of 1k \\(\\Omega\\) for the on-board LEDs and 330 \\(\\Omega\\) for the seven segment display LEDs to ensure the circuit did not draw too much current from the FPGA pins."
+    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nFigure 1: Block Diagram\n Figure 1 showcases the design implimented on the FPGA, with the lab1 module containing the oscillator and seven segment display logic modules.\n\n\nFigure 2: Schematic\n Figure 2 shows the circuit for the lab. The LEDs were connected to current limiting resistors of 1k \\(\\Omega\\) for the on-board LEDs and 100 \\(\\Omega\\) for the seven segment display LEDs to ensure the circuit did not draw too much current from the FPGA pins. The resistor values for the seven segment display were found by solving for R in V = IR with the voltage and desired current of the circuit. The voltage drop of the LED was 1.5, and the desired current was 5-20 mA. Solving for R with 5 and 20 mA, we see that the desired resistor is between 75 and 300 \\(\\Omega\\)."
   },
   {
     "objectID": "labs/lab1/lab1.html#results-and-discussion",

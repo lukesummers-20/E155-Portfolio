@@ -237,7 +237,7 @@ window.Quarto = {
 </section>
 <section id="figure-2-schematic" class="level3">
 <h3 class="anchored" data-anchor-id="figure-2-schematic">Figure 2: Schematic</h3>
-<p><img src="images/schematic.jpg" class="img-fluid" alt="Figure 2: Schematic of the FPGA and LED Circuit"> Figure 2 shows the circuit for the lab. The LEDs were connected to current limiting resistors of 1k <span class="math inline">\(\Omega\)</span> for the on-board LEDs and 330 <span class="math inline">\(\Omega\)</span> for the seven segment display LEDs to ensure the circuit did not draw too much current from the FPGA pins.</p>
+<p><img src="images/schematic.jpg" class="img-fluid" alt="Figure 2: Schematic of the FPGA and LED Circuit"> Figure 2 shows the circuit for the lab. The LEDs were connected to current limiting resistors of 1k <span class="math inline">\(\Omega\)</span> for the on-board LEDs and 100 <span class="math inline">\(\Omega\)</span> for the seven segment display LEDs to ensure the circuit did not draw too much current from the FPGA pins. The resistor values for the seven segment display were found by solving for R in V = IR with the voltage and desired current of the circuit. The voltage drop of the LED was 1.5, and the desired current was 5-20 mA. Solving for R with 5 and 20 mA, we see that the desired resistor is between 75 and 300 <span class="math inline">\(\Omega\)</span>.</p>
 </section>
 </section>
 <section id="results-and-discussion" class="level2">
