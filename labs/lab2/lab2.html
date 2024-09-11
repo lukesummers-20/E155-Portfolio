@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lab2 – E155 Portfolio</title>
+<title>Lab 2: Multiplexed 7-Segment Display – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -151,18 +180,129 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-2-multiplexed-7-segment-display" id="toc-lab-2-multiplexed-7-segment-display" class="nav-link active" data-scroll-target="#lab-2-multiplexed-7-segment-display">Lab 2: Multiplexed 7-Segment Display</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation:</a>
+  <ul class="collapse">
+  <li><a href="#block-diagram" id="toc-block-diagram" class="nav-link" data-scroll-target="#block-diagram">Block Diagram</a></li>
+  <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a></li>
+  <li><a href="#example-of-seven-segment-displays" id="toc-example-of-seven-segment-displays" class="nav-link" data-scroll-target="#example-of-seven-segment-displays">Example of Seven Segment Displays</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
-</nav>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/lukesummers-20/e155-lab2"><i class="bi bi-github"></i>Repository</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 2: Multiplexed 7-Segment Display</h1>
+</div>
 
 
 
-<section id="lab-2-multiplexed-7-segment-display" class="level2">
-<h2 class="anchored" data-anchor-id="lab-2-multiplexed-7-segment-display">Lab 2: Multiplexed 7-Segment Display</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, the FPGA was used to drive two seven segment displays using only one set of logic for the display outputs. The FPGA took inputs from two four input DIP switches and displayed the two inputs on two seven segment displays and their sum using seperate LEDs. The main task of this lab was to drive the displays using one seven segment display signal decoder.</p>
+</section>
+<section id="design-and-testing-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
+<p>The task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The on-board high-speed oscillator was used to produce a clock signal, and then the input multiplexer module would then on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. This LED display signal was one of the outputs of the FPGA in the circuit. Two enable signals were also output for transistors used to drive the displays. The sum of the two inputs was calculated in another module and this sum signal was also outputed by the FPGA. A testbench was created for the adder and input multiplexer modules to test their function in QuestaSim. The seven segment display decoder module is from a previous lab where it was already tested and it is unreasonable to test the oscillator signal in simulation.<br>
+The circuit that was made with the FPGA included the two seven segment displays, five LEDs for the sum, and transistors for driving the seven segment displays. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit.</p>
+</section>
+<section id="technical-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation:</h2>
+<p>The sourcecode for the project can be found in the <a href="https://github.com/lukesummers-20/e155-lab2">Github repository</a>.</p>
+<section id="block-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram">Block Diagram</h3>
+<div id="fig-block" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-block-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/block-diagram.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-block-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Block Diagram
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-block" class="quarto-xref">Figure&nbsp;1</a> shows the design implimented on the FPGA.</p>
+</section>
+<section id="schematic" class="level3">
+<h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
+<div id="fig-sch" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/schematic.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Schematic
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-sch" class="quarto-xref">Figure&nbsp;2</a> shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 <span class="math inline">\(\Omega\)</span>. These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 <span class="math inline">\(\Omega\)</span> resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal.</p>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<section id="testbench-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h3>
+<div id="fig-l2a" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-l2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/lab2_adder_tb.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-l2a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Adder Testbench
+</figcaption>
+</figure>
+</div>
+<div id="fig-l2im" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-l2im-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/lab2_inputMultiplexer_tb.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-l2im-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Input Multiplexer Testbench
+</figcaption>
+</figure>
+</div>
+<p>The design met all intended objectives. <a href="#fig-l2a" class="quarto-xref">Figure&nbsp;3</a> shows the signals produced by the testbench for the adder module. The expected output is the same as the output, so the adder module was succesful in simulation. <a href="#fig-l2im" class="quarto-xref">Figure&nbsp;4</a> shows the signals produced by the testbench for the input multiplexer module. The output signals replicate the expected output signals as the clock cycles, showing this module succesfully multiplexes the signals in simulation.</p>
+</section>
+<section id="example-of-seven-segment-displays" class="level3">
+<h3 class="anchored" data-anchor-id="example-of-seven-segment-displays">Example of Seven Segment Displays</h3>
+<div id="fig-dis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/display.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Display Example
+</figcaption>
+</figure>
+</div>
+<p>In addition to working in simulation, the design also worked in reality. <a href="#fig-dis" class="quarto-xref">Figure&nbsp;5</a> shows an example of the circuit working. Both switches were inputing ‘1000’, which is 8 as seen on the two seven segment displays. The sum is thus 16 or ‘10000’ which is shown by the fifth LED being lit up on the LED bar in the bottom right of the photo.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The FPGA was used two time multiplex two input signals to drive two seven segment displays in addition to displaying their sum. I spent a total of 12 hours on this lab.</p>
 
 
 </section>
