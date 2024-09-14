@@ -1,0 +1,11 @@
+---
+title: "Week 2"
+description: "Second week reflection"
+author: "Luke Summers"
+date: "9/13/24"
+categories:
+  - reflection
+draft: false
+---
+In this week of E155 I feel like I was able to finally knock off all of the rust I had devloped in my intermission from E85. In terms of doing the lab, I feel like I was able to get back in the groove of the softwares we had used in E85 and learn the new software introduced in this course. This was helpful in speeding up my overall lab process as I was able to spend more time doing the lab as opposed to trying to figure out or remember how to use a certain software. In addition to this, in class review and doing the first lab had helped me remember how to use verilog so I was able to enter the verilog design portion of this lab in the correct headspace of a hardware designer in contrast to my usual software design thoughts as a computer science major. \
+In class these week we began discussing the MCU we will be using in the course. This made me excited for the upcoming labs involving the MCU. Labs 1-3 involved only FPGA design, and Labs 4-6 will be focused around MCU design. After seeing myself transition from a very limited understanding of FPGA use to at least somewhat of an understanding after the first two labs, I am excited for this to happen again in relation to the MCU. I think right now one of the things limiting my ideation for the project is not knowing what I could do with an MCU, so I am eager to start using it so I can have a better idea of the design tools I could put to use in my project.
