@@ -146,14 +146,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#lab-4-arm-assembly-sort" id="toc-lab-4-arm-assembly-sort" class="nav-link active" data-scroll-target="#lab-4-arm-assembly-sort">Lab 4: ARM Assembly Sort</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -161,11 +155,53 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="lab-4-arm-assembly-sort" class="level2">
-<h2 class="anchored" data-anchor-id="lab-4-arm-assembly-sort">Lab 4: ARM Assembly Sort</h2>
+<!-- ---
+title: "Lab 4: Digital Audio"
+fig-cap-location: bottom
+format:
+  html:
+    code-links:
+      - text: "Repository"
+        href: https://github.com/lukesummers-20/e155-lab4
+        icon: github
+
+---
+
+## Introduction
+In this lab the MCU was used to drive a small speaker to play short tunes. One of the basic timers on the MCU were used to generate the square wave for the speaker, and the other was used to handle generating the square wave for a certain duration. The design implimented played "Fur Elise" and the melody of "Blue(Da Ba Dee)".
+
+## Design and Testing Methodology
+The task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The on-board high-speed oscillator was used to produce a clock signal, and then the input multiplexer module would then on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. This LED display signal was one of the outputs of the FPGA in the circuit. Two enable signals were also output for transistors used to drive the displays.  The sum of the two inputs was calculated in another module and this sum signal was also outputed by the FPGA. A testbench was created for the adder and input multiplexer modules to test their function in QuestaSim. The seven segment display decoder module is from a previous lab where it was already tested and it is unreasonable to test the oscillator signal in simulation. \
+The circuit that was made with the FPGA included the two seven segment displays, five LEDs for the sum, and transistors for driving the seven segment displays. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit. 
+
+The square wave use generated using one of the basic timers on the MCU. With how the RCC clock configuration register was set, the clock that is fed into the timer was at a frequency of 1 Mhz. This was done by setting bits 4-7 of the RCC_CFGR register to '1001'. The prescaler on the clock was set to 1 as the input clock was already 1 MHz. In order to generate the square wave, the counter register of the timer was set so that counter overflow would happen at twice the desired frequency. The square wave was then made by writing one to the pin, waiting for one period of the clock to have counter overflow, writing 0 to the pin and waiting for another period of the timer, and then repeating. Since counter overflow will occur at twice the desired frequency, the output pin will have a wave that is at the desired frequency. 
+
+## Technical Documentation:
+The sourcecode for the project can be found in the [Github repository](https://github.com/lukesummers-20/e155-lab4).
+
+### Schematic
+![Schematic](images/schematic.jpg){#fig-sch}
+
+@fig-sch shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 $\Omega$. These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 $\Omega$ resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal. 
+
+## Results and Discussion
+
+### Testbench Simulation
+![Adder Testbench](images/lab2_adder_tb.jpg){#fig-l2a}
+
+![Input Multiplexer Testbench](images/lab2_inputMultiplexer_tb.jpg){#fig-l2im}
+
+The design met all intended objectives. @fig-l2a shows the signals produced by the testbench for the adder module. The expected output is the same as the output, so the adder module was succesful in simulation. @fig-l2im shows the signals produced by the testbench for the input multiplexer module. The output signals replicate the expected output signals as the clock cycles, showing this module succesfully multiplexes the signals in simulation. 
+
+### Example of Seven Segment Displays
+![Display Example](images/display.jpg){#fig-dis}
+
+In addition to working in simulation, the design also worked in reality. @fig-dis shows an example of the circuit working. Both switches were inputing '1000', which is 8 as seen on the two seven segment displays. The sum is thus 16 or '10000' which is shown by the fifth LED being lit up on the LED bar in the bottom right of the photo.
+
+## Conclusion
+The FPGA was used two time multiplex two input signals to drive two seven segment displays in addition to displaying their sum. I spent a total of 12 hours on this lab. -->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
