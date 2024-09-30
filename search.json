@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "E155 Blog",
     "section": "",
-    "text": "Week 3\n\n\n\n\n\nThird week reflection\n\n\n\n\n\nSep 20, 2024\n\n\nLuke Summers\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nSecond week reflection\n\n\n\n\n\nSep 13, 2024\n\n\nLuke Summers\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nFirst week reflection\n\n\n\n\n\nSep 6, 2024\n\n\nLuke Summers\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 4\n\n\n\n\n\nFourth week reflection\n\n\n\n\n\nSep 29, 2024\n\n\nLuke Summers\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nThird week reflection\n\n\n\n\n\nSep 20, 2024\n\n\nLuke Summers\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nSecond week reflection\n\n\n\n\n\nSep 13, 2024\n\n\nLuke Summers\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nFirst week reflection\n\n\n\n\n\nSep 6, 2024\n\n\nLuke Summers\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/second-post.html",
@@ -14,53 +14,102 @@
     "text": "In this week of E155 I feel like I was able to finally knock off all of the rust I had devloped in my intermission from E85. In terms of doing the lab, I feel like I was able to get back in the groove of the softwares we had used in E85 and learn the new software introduced in this course. This was helpful in speeding up my overall lab process as I was able to spend more time doing the lab as opposed to trying to figure out or remember how to use a certain software. In addition to this, in class review and doing the first lab had helped me remember how to use verilog so I was able to enter the verilog design portion of this lab in the correct headspace of a hardware designer in contrast to my usual software design thoughts as a computer science major.\nIn class these week we began discussing the MCU we will be using in the course. This made me excited for the upcoming labs involving the MCU. Labs 1-3 involved only FPGA design, and Labs 4-6 will be focused around MCU design. After seeing myself transition from a very limited understanding of FPGA use to at least somewhat of an understanding after the first two labs, I am excited for this to happen again in relation to the MCU. I think right now one of the things limiting my ideation for the project is not knowing what I could do with an MCU, so I am eager to start using it so I can have a better idea of the design tools I could put to use in my project."
   },
   {
-    "objectID": "posts/third-post.html",
-    "href": "posts/third-post.html",
-    "title": "Week 3",
+    "objectID": "posts/fourth-post.html",
+    "href": "posts/fourth-post.html",
+    "title": "Week 4",
     "section": "",
-    "text": "In this week of E155 I have enjoyed having to face a different kind of debugging that debugging software cannot offer. In building my finite state machine for lab 3, I have found difficulty in even what I thought were the more simple tasks of the lab. In my first attempt to move from simulation to hardware for the lab, I found my modules that worked completely as expected in simulation not even show the slightest signs of working in hardware. Although it would have been nice to create a working design for the lab on the first try, I was excited at the opportunity this gave me.\nI feel like in comparing how I have been thinking trying to debug my ciruit for the lab and how I usually think when trying to debug code, I have only found how different the processes are. There is an obvious sense of debugging strategies being resitricted without simple tools such as print statements, and that the goal is to check for function not for a status of function. I have enjoyed so far how these restictions have forced me to restructure my strategies towards debugging."
+    "text": "So far this has been the most I have worked on E155 in a week, but I found the work enjoyable. I was unable to complete lab 3 by Thursday, as in the beginning of the week I found myself struggling to read an input from the column. After about 15 hours of work on the lab, I kind of started over and tried rebuilding a new FSM where I slowly added pieces of functionality. This strategy worked for me as I was able to first pulse the rows correctly, then transfer to a desired state on a button press, and so on. I eventually got to a point where my design could correctly read a button press, but it would not display the numbers correctly on the display. At this point I stopped working on lab 3 and started working on lab 4. I found better luck on lab 4 than I did on lab 3 as I was able to complete the task in much less time. In my design for lab 4 I used the basic timers on the MCU, but I realized I could use the generic timer in a PWM function to generate the square wave which might be more accurate. I plan to use the rest of my time before lab 4 is due to test how accurate my design is and update it to use PWM if necessary. I restarted working on lab 3 today also, and was able to complete it. I found that my design was working as expected, I just needed to slow my clock down."
   },
   {
-    "objectID": "labs/lab3/lab3.html",
-    "href": "labs/lab3/lab3.html",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html",
+    "href": "labs/lab4/lab4.html",
+    "title": "Lab 4: Digital Audio",
     "section": "",
-    "text": "In this lab the FPGA was used to take input from a 4 \\(\\times\\) 4 keypad and then displayed the 2 most recently pressed digits on a dual seven segment display. Recieving the input from the keypad was done using a finite state machine, and then the display was drivin with the same modules used in Lab 2. Thus the main task of the lab was designing the FSM to correctly read inputs from the keypad scanner."
+    "text": "In this lab the MCU was used to drive a small speaker to play short tunes. One of the basic timers on the MCU were used to generate the square wave for the speaker, and the other was used to handle generating the square wave for a certain duration. The design implimented played “Fur Elise” and the melody of “Blue(Da Ba Dee)”."
   },
   {
-    "objectID": "labs/lab3/lab3.html#introduction",
-    "href": "labs/lab3/lab3.html#introduction",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html#introduction",
+    "href": "labs/lab4/lab4.html#introduction",
+    "title": "Lab 4: Digital Audio",
     "section": "",
-    "text": "In this lab the FPGA was used to take input from a 4 \\(\\times\\) 4 keypad and then displayed the 2 most recently pressed digits on a dual seven segment display. Recieving the input from the keypad was done using a finite state machine, and then the display was drivin with the same modules used in Lab 2. Thus the main task of the lab was designing the FSM to correctly read inputs from the keypad scanner."
+    "text": "In this lab the MCU was used to drive a small speaker to play short tunes. One of the basic timers on the MCU were used to generate the square wave for the speaker, and the other was used to handle generating the square wave for a certain duration. The design implimented played “Fur Elise” and the melody of “Blue(Da Ba Dee)”."
   },
   {
-    "objectID": "labs/lab3/lab3.html#design-and-testing-methodology",
-    "href": "labs/lab3/lab3.html#design-and-testing-methodology",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html#design-and-testing-methodology",
+    "href": "labs/lab4/lab4.html#design-and-testing-methodology",
+    "title": "Lab 4: Digital Audio",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology\nThe task was completed using a finite state machine and a decoder to decode the output signals from the FSM. The onboard high speed oscillator was used to produce the clock signal to drive the other modules. A synchronizer module was used to synchronize the inputs from the keypad columns for the FSM. The finite state machine that read the input from the keypad scanner would continuously power one row of the scanner at a time until a button was pressed, connecting a row to a column and powering one of the column bits. The design implimented would register one key press if a key was held, and it would ignore any other keys pressed while a key was held. In order to ignore switch bouncing, the FSM design had two hold states for the signal to bounce whenever a button was pressed. This meant that the system had to be clocked at a frequency slow enough to where 2 cycles would be enough to handle the switch bouncing. A more complex design could have been used to handle switch bouncing at a faster clock frequency but that was not necessary for this lab. When a key was pressed, it would set the enable signal for the FSM decoder to then update the input signals to the display. The FSM decoder completed the logic to decode the row and column into the digit pressed, and then used an enabled flip flop to update the two output digit signals. The task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The input multiplexer module would on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. Two enable signals were also output for transistors used to drive the displays. A testbench was created for the FSM, decoder, and lab3 top modules in order to test their functionality in simulation. The circuit for the design included the dual seven segment display, two PNP transistors for driving the display, and the keypad scanner. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit. Since the pins connected to the keypad would be floating when a button was not pressed, pull down resistors were used on these signals."
+    "text": "Design and Testing Methodology\nThe square wave was generated using one of the basic timers on the MCU. With how the RCC clock configuration register was set, the clock that is fed into the timer was at a frequency of 1 Mhz. This was done by setting bits 4-7 of the RCC_CFGR register to ‘1001’. The prescaler on the clock was set to 1 as the input clock was already the desired frequency. In order to generate the square wave, the auto reload register of the timer was set so that counter overflow would happen at twice the desired frequency. The square wave was then made by clearing the timers status flag, writing one to the pin, waiting for one period of the clock to have counter overflow, reseting the timer status flag, writing 0 to the pin and waiting for another period of the timer, and then repeating. Since counter overflow will occur at twice the desired frequency, the output pin will have a wave that is at the desired frequency. The other basic timer was then used to output this square wave for the desired duration of time. The prescaler of this timer was set so that the clock frequency of the timer was 1 Khz. With a frequency of 1 KHz the counter of this timer would be incrementing once every millisecond, which means the auto reload register of the timer could be set to the desired number of milliseconds and then the counter overflowing could be used to trigger the stoppage of the square wave. In this way the two timers could be used to generate square waves at specific frequencies for a certain number of milliseconds which was used to drive the speaker. The design was tested by using the oscilliscope to measure the frequency of an output wave to compare it to the desired frequency of the design. The circuit included the MCU, a LM386 audio amplfier, a 8 Ohm speaker, and a potentiometer for volume control. It also used two switches to trigger the playing of each song."
   },
   {
-    "objectID": "labs/lab3/lab3.html#technical-documentation",
-    "href": "labs/lab3/lab3.html#technical-documentation",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html#technical-documentation",
+    "href": "labs/lab4/lab4.html#technical-documentation",
+    "title": "Lab 4: Digital Audio",
     "section": "Technical Documentation:",
-    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block Diagram\n\n\n\nFigure 1 shows the design implimented on the FPGA.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic\n\n\n\nFigure 2 shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 \\(\\Omega\\). These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 \\(\\Omega\\) resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal. 100 \\(\\Omega\\) resistors were used to pull the column pins to ground.\n\n\nState Transition Diagram\n\n\n\n\n\n\nFigure 3: State Transition Diagram\n\n\n\nFigure 3 shows the state transition diagam for the design’s FSM. The row checking sections are offset from the row pressed sections due to the synchronizer delaying the column input by two clock cycles. States 4, 5, 7, 8, 10, 11, 13, and 14 are the hold states to deal with switch bouncing.\n\n\nNext State Logic\n\n\n\nTable 1: Next State Logic\n\n\n\n\n\nstate\ncol_sync\nnext\n\n\n\n\ns0\n0000\ns1\n\n\ns0\n!(0000)\ns10\n\n\ns1\n0000\ns2\n\n\ns1\n!(0000)\ns13\n\n\ns2\n0000\ns3\n\n\ns2\n!(0000)\ns4\n\n\ns3\n0000\ns0\n\n\ns3\n!(0000)\ns7\n\n\ns4\nxxxx\ns5\n\n\ns5\nxxxx\ns6\n\n\ns6\n0000\ns1\n\n\ns6\n!(0000)\ns6\n\n\ns7\nxxxx\ns8\n\n\ns8\nxxxx\ns9\n\n\ns9\n0000\ns2\n\n\ns9\n!(0000)\ns9\n\n\ns10\nxxxx\ns11\n\n\ns11\nxxxx\ns12\n\n\ns12\n0000\ns3\n\n\ns12\n!(0000)\ns12\n\n\ns13\nxxxx\ns14\n\n\ns14\nxxxx\ns15\n\n\ns15\n0000\ns0\n\n\ns15\n!(0000)\ns15\n\n\n\n\n\n\nTable 1 shows the next state logic for the FSM of the design.\n\n\nOutput Logic\n\n\n\nTable 2: Output Logic\n\n\n\n\n\nState\nrow\nrow_pressed\nen\n\n\n\n\ns0\n0001\n0000\n0\n\n\ns1\n0010\n0000\n0\n\n\ns2\n0100\n0000\n0\n\n\ns3\n1000\n0000\n0\n\n\ns4\n0001\n0001\n1\n\n\ns5\n0001\n0001\n0\n\n\ns6\n0001\n0001\n0\n\n\ns7\n0010\n0010\n1\n\n\ns8\n0010\n0010\n0\n\n\ns9\n0010\n0010\n0\n\n\ns10\n0100\n0100\n1\n\n\ns11\n0100\n0100\n0\n\n\ns12\n0100\n0100\n0\n\n\ns13\n1000\n1000\n1\n\n\ns14\n1000\n1000\n0\n\n\ns15\n1000\n1000\n0\n\n\n\n\n\n\nTable 2 shows the output logic for the FSM of the design."
+    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nSchematic\n\n\n\n\n\n\nFigure 1: Schematic\n\n\n\nFigure 1 shows the circuit for the design.\n\n\nCalculations\n\n\n\n\n\n\nFigure 2: Frequency Accuracy\n\n\n\nFigure 2 shows the calculations done for the accuracy of the design at outputing a wave in the range of 220 Hz to 1000 Hz. Since the design is within the standard for 220 Hz and 1000 Hz, it will be within the standard for all frequencies in between.\n\n\n\n\n\n\nFigure 3: Frequency and Duration Range\n\n\n\nFigure 3 shows the calculations done for the frequency and duration ranges. The minimum duration is 0 ms and the maximum is just the maximum that the ARR can be set to, which is 65,535 because the ARR has 16 accessible bits. Thus the maximum duration supported is 65.545 seconds. The design could be changed to increase this value by changing the clock frequency of the timer. The design supports a freqency of 0, but that just outputs nothing. The minimum frequency it can generate is 7.6 Hz, as the ARR can be set to 65,535 which would produce counter overflow at 15.2 Hz. The output frequency would then be 7.6 Hz. The maximum is just the timer clock frequency which is 1 Mhz. The timer clock frequency could be changed to achieve frequencies outside of this range if desired."
   },
   {
-    "objectID": "labs/lab3/lab3.html#results-and-discussion",
-    "href": "labs/lab3/lab3.html#results-and-discussion",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html#results-and-discussion",
+    "href": "labs/lab4/lab4.html#results-and-discussion",
+    "title": "Lab 4: Digital Audio",
     "section": "Results and Discussion",
-    "text": "Results and Discussion\n\nTestbench Simulation\n\n\n\n\n\n\nFigure 4: FSM Simulation\n\n\n\n\n\n\n\n\n\nFigure 5: FSM Decoder Simulation\n\n\n\n\n\n\n\n\n\nFigure 6: Lab 3 Top Simulation\n\n\n\nThe design met all intended objectives. Figure 4 shows the FSM of the design working in simulation. The rows switch as desired and the module handles an input correctly as seen in the image. Figure 5 shows the FSM decoder working as expected. The waves show the signals switching only when the enable signal is 1. Figure 6 shows the top module working as expected, seen by the correct row outputs and the multiplexed display signal.\n\n\nExample of Design\n\nIn addition to working in simulation, the design also worked in reality. The video above shows an example of the circuit working."
+    "text": "Results and Discussion"
   },
   {
-    "objectID": "labs/lab3/lab3.html#conclusion",
-    "href": "labs/lab3/lab3.html#conclusion",
-    "title": "Lab 3: Keypad Scanner",
+    "objectID": "labs/lab4/lab4.html#oscilliscope-reading",
+    "href": "labs/lab4/lab4.html#oscilliscope-reading",
+    "title": "Lab 4: Digital Audio",
+    "section": "Oscilliscope Reading",
+    "text": "Oscilliscope Reading\n\n\n\n\n\n\nFigure 4: Oscilliscope Reading\n\n\n\nFigure 4 shows an oscilliscope reading of the output pin when trying to output a XX Hz signal. The ARR was set to XX so that counter overflow would occur at twice the desired frequency, as the design would toggle the pin at half of the frequency of counter overflow.\n\nExample of Design\n\nThe video above shows the design playing both of the desired songs, along with the potentiometer being used to control the volume."
+  },
+  {
+    "objectID": "labs/lab4/lab4.html#conclusion",
+    "href": "labs/lab4/lab4.html#conclusion",
+    "title": "Lab 4: Digital Audio",
     "section": "Conclusion",
-    "text": "Conclusion\nThe FPGA was used to read the keypad scanner and display the last two digits pressed. I spent a total of 27 hours on this lab."
+    "text": "Conclusion\nThe MCU’s on board timers were used to generate certain frequencies of square waves for certain durations in order to drive a small speaker. I spent a total of 9 hours on this lab."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html",
+    "href": "labs/lab2/lab2.html",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "In this lab, the FPGA was used to drive two seven segment displays using only one set of logic for the display outputs. The FPGA took inputs from two four input DIP switches and displayed the two inputs on two seven segment displays and their sum using seperate LEDs. The main task of this lab was to drive the displays using one seven segment display signal decoder."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#introduction",
+    "href": "labs/lab2/lab2.html#introduction",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "In this lab, the FPGA was used to drive two seven segment displays using only one set of logic for the display outputs. The FPGA took inputs from two four input DIP switches and displayed the two inputs on two seven segment displays and their sum using seperate LEDs. The main task of this lab was to drive the displays using one seven segment display signal decoder."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#design-and-testing-methodology",
+    "href": "labs/lab2/lab2.html#design-and-testing-methodology",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "Design and Testing Methodology",
+    "text": "Design and Testing Methodology\nThe task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The on-board high-speed oscillator was used to produce a clock signal, and then the input multiplexer module would then on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. This LED display signal was one of the outputs of the FPGA in the circuit. Two enable signals were also output for transistors used to drive the displays. The sum of the two inputs was calculated in another module and this sum signal was also outputed by the FPGA. A testbench was created for the adder and input multiplexer modules to test their function in QuestaSim. The seven segment display decoder module is from a previous lab where it was already tested and it is unreasonable to test the oscillator signal in simulation.\nThe circuit that was made with the FPGA included the two seven segment displays, five LEDs for the sum, and transistors for driving the seven segment displays. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#technical-documentation",
+    "href": "labs/lab2/lab2.html#technical-documentation",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "Technical Documentation:",
+    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block Diagram\n\n\n\nFigure 1 shows the design implimented on the FPGA.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic\n\n\n\nFigure 2 shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 \\(\\Omega\\). These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 \\(\\Omega\\) resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#results-and-discussion",
+    "href": "labs/lab2/lab2.html#results-and-discussion",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion\n\nTestbench Simulation\n\n\n\n\n\n\nFigure 3: Adder Testbench\n\n\n\n\n\n\n\n\n\nFigure 4: Input Multiplexer Testbench\n\n\n\nThe design met all intended objectives. Figure 3 shows the signals produced by the testbench for the adder module. The expected output is the same as the output, so the adder module was succesful in simulation. Figure 4 shows the signals produced by the testbench for the input multiplexer module. The output signals replicate the expected output signals as the clock cycles, showing this module succesfully multiplexes the signals in simulation.\n\n\nExample of Seven Segment Displays\n\n\n\n\n\n\nFigure 5: Display Example\n\n\n\nIn addition to working in simulation, the design also worked in reality. Figure 5 shows an example of the circuit working. Both switches were inputing ‘1000’, which is 8 as seen on the two seven segment displays. The sum is thus 16 or ‘10000’ which is shown by the fifth LED being lit up on the LED bar in the bottom right of the photo."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#conclusion",
+    "href": "labs/lab2/lab2.html#conclusion",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe FPGA was used two time multiplex two input signals to drive two seven segment displays in addition to displaying their sum. I spent a total of 12 hours on this lab."
   },
   {
     "objectID": "labs/lab1/lab1.html",
@@ -105,46 +154,53 @@
     "text": "Conclusion\nThe design performed the desired logic in simulation and in a circuit. This proved all the components of the circuit board assembled to be functioning. I spent a total of 18 hours on this lab."
   },
   {
-    "objectID": "labs/lab2/lab2.html",
-    "href": "labs/lab2/lab2.html",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html",
+    "href": "labs/lab3/lab3.html",
+    "title": "Lab 3: Keypad Scanner",
     "section": "",
-    "text": "In this lab, the FPGA was used to drive two seven segment displays using only one set of logic for the display outputs. The FPGA took inputs from two four input DIP switches and displayed the two inputs on two seven segment displays and their sum using seperate LEDs. The main task of this lab was to drive the displays using one seven segment display signal decoder."
+    "text": "In this lab the FPGA was used to take input from a 4 \\(\\times\\) 4 keypad and then displayed the 2 most recently pressed digits on a dual seven segment display. Recieving the input from the keypad was done using a finite state machine, and then the display was drivin with the same modules used in Lab 2. Thus the main task of the lab was designing the FSM to correctly read inputs from the keypad scanner."
   },
   {
-    "objectID": "labs/lab2/lab2.html#introduction",
-    "href": "labs/lab2/lab2.html#introduction",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html#introduction",
+    "href": "labs/lab3/lab3.html#introduction",
+    "title": "Lab 3: Keypad Scanner",
     "section": "",
-    "text": "In this lab, the FPGA was used to drive two seven segment displays using only one set of logic for the display outputs. The FPGA took inputs from two four input DIP switches and displayed the two inputs on two seven segment displays and their sum using seperate LEDs. The main task of this lab was to drive the displays using one seven segment display signal decoder."
+    "text": "In this lab the FPGA was used to take input from a 4 \\(\\times\\) 4 keypad and then displayed the 2 most recently pressed digits on a dual seven segment display. Recieving the input from the keypad was done using a finite state machine, and then the display was drivin with the same modules used in Lab 2. Thus the main task of the lab was designing the FSM to correctly read inputs from the keypad scanner."
   },
   {
-    "objectID": "labs/lab2/lab2.html#design-and-testing-methodology",
-    "href": "labs/lab2/lab2.html#design-and-testing-methodology",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html#design-and-testing-methodology",
+    "href": "labs/lab3/lab3.html#design-and-testing-methodology",
+    "title": "Lab 3: Keypad Scanner",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology\nThe task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The on-board high-speed oscillator was used to produce a clock signal, and then the input multiplexer module would then on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. This LED display signal was one of the outputs of the FPGA in the circuit. Two enable signals were also output for transistors used to drive the displays. The sum of the two inputs was calculated in another module and this sum signal was also outputed by the FPGA. A testbench was created for the adder and input multiplexer modules to test their function in QuestaSim. The seven segment display decoder module is from a previous lab where it was already tested and it is unreasonable to test the oscillator signal in simulation.\nThe circuit that was made with the FPGA included the two seven segment displays, five LEDs for the sum, and transistors for driving the seven segment displays. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit."
+    "text": "Design and Testing Methodology\nThe task was completed using a finite state machine and a decoder to decode the output signals from the FSM. The onboard high speed oscillator was used to produce the clock signal to drive the other modules. A synchronizer module was used to synchronize the inputs from the keypad columns for the FSM. The finite state machine that read the input from the keypad scanner would continuously power one row of the scanner at a time until a button was pressed, connecting a row to a column and powering one of the column bits. The design implimented would register one key press if a key was held, and it would ignore any other keys pressed while a key was held. In order to ignore switch bouncing, the FSM design had two hold states for the signal to bounce whenever a button was pressed. This meant that the system had to be clocked at a frequency slow enough to where 2 cycles would be enough to handle the switch bouncing. A more complex design could have been used to handle switch bouncing at a faster clock frequency but that was not necessary for this lab. When a key was pressed, it would set the enable signal for the FSM decoder to then update the input signals to the display. The FSM decoder completed the logic to decode the row and column into the digit pressed, and then used an enabled flip flop to update the two output digit signals. The task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The input multiplexer module would on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. Two enable signals were also output for transistors used to drive the displays. A testbench was created for the FSM, decoder, and lab3 top modules in order to test their functionality in simulation. The circuit for the design included the dual seven segment display, two PNP transistors for driving the display, and the keypad scanner. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit. Since the pins connected to the keypad would be floating when a button was not pressed, pull down resistors were used on these signals."
   },
   {
-    "objectID": "labs/lab2/lab2.html#technical-documentation",
-    "href": "labs/lab2/lab2.html#technical-documentation",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html#technical-documentation",
+    "href": "labs/lab3/lab3.html#technical-documentation",
+    "title": "Lab 3: Keypad Scanner",
     "section": "Technical Documentation:",
-    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block Diagram\n\n\n\nFigure 1 shows the design implimented on the FPGA.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic\n\n\n\nFigure 2 shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 \\(\\Omega\\). These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 \\(\\Omega\\) resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal."
+    "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block Diagram\n\n\n\nFigure 1 shows the design implimented on the FPGA.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic\n\n\n\nFigure 2 shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 \\(\\Omega\\). These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 \\(\\Omega\\) resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal. 100 \\(\\Omega\\) resistors were used to pull the column pins to ground.\n\n\nState Transition Diagram\n\n\n\n\n\n\nFigure 3: State Transition Diagram\n\n\n\nFigure 3 shows the state transition diagam for the design’s FSM. The row checking sections are offset from the row pressed sections due to the synchronizer delaying the column input by two clock cycles. States 4, 5, 7, 8, 10, 11, 13, and 14 are the hold states to deal with switch bouncing.\n\n\nNext State Logic\n\n\n\nTable 1: Next State Logic\n\n\n\n\n\nstate\ncol_sync\nnext\n\n\n\n\ns0\n0000\ns1\n\n\ns0\n!(0000)\ns10\n\n\ns1\n0000\ns2\n\n\ns1\n!(0000)\ns13\n\n\ns2\n0000\ns3\n\n\ns2\n!(0000)\ns4\n\n\ns3\n0000\ns0\n\n\ns3\n!(0000)\ns7\n\n\ns4\nxxxx\ns5\n\n\ns5\nxxxx\ns6\n\n\ns6\n0000\ns1\n\n\ns6\n!(0000)\ns6\n\n\ns7\nxxxx\ns8\n\n\ns8\nxxxx\ns9\n\n\ns9\n0000\ns2\n\n\ns9\n!(0000)\ns9\n\n\ns10\nxxxx\ns11\n\n\ns11\nxxxx\ns12\n\n\ns12\n0000\ns3\n\n\ns12\n!(0000)\ns12\n\n\ns13\nxxxx\ns14\n\n\ns14\nxxxx\ns15\n\n\ns15\n0000\ns0\n\n\ns15\n!(0000)\ns15\n\n\n\n\n\n\nTable 1 shows the next state logic for the FSM of the design.\n\n\nOutput Logic\n\n\n\nTable 2: Output Logic\n\n\n\n\n\nState\nrow\nrow_pressed\nen\n\n\n\n\ns0\n0001\n0000\n0\n\n\ns1\n0010\n0000\n0\n\n\ns2\n0100\n0000\n0\n\n\ns3\n1000\n0000\n0\n\n\ns4\n0001\n0001\n1\n\n\ns5\n0001\n0001\n0\n\n\ns6\n0001\n0001\n0\n\n\ns7\n0010\n0010\n1\n\n\ns8\n0010\n0010\n0\n\n\ns9\n0010\n0010\n0\n\n\ns10\n0100\n0100\n1\n\n\ns11\n0100\n0100\n0\n\n\ns12\n0100\n0100\n0\n\n\ns13\n1000\n1000\n1\n\n\ns14\n1000\n1000\n0\n\n\ns15\n1000\n1000\n0\n\n\n\n\n\n\nTable 2 shows the output logic for the FSM of the design."
   },
   {
-    "objectID": "labs/lab2/lab2.html#results-and-discussion",
-    "href": "labs/lab2/lab2.html#results-and-discussion",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html#results-and-discussion",
+    "href": "labs/lab3/lab3.html#results-and-discussion",
+    "title": "Lab 3: Keypad Scanner",
     "section": "Results and Discussion",
-    "text": "Results and Discussion\n\nTestbench Simulation\n\n\n\n\n\n\nFigure 3: Adder Testbench\n\n\n\n\n\n\n\n\n\nFigure 4: Input Multiplexer Testbench\n\n\n\nThe design met all intended objectives. Figure 3 shows the signals produced by the testbench for the adder module. The expected output is the same as the output, so the adder module was succesful in simulation. Figure 4 shows the signals produced by the testbench for the input multiplexer module. The output signals replicate the expected output signals as the clock cycles, showing this module succesfully multiplexes the signals in simulation.\n\n\nExample of Seven Segment Displays\n\n\n\n\n\n\nFigure 5: Display Example\n\n\n\nIn addition to working in simulation, the design also worked in reality. Figure 5 shows an example of the circuit working. Both switches were inputing ‘1000’, which is 8 as seen on the two seven segment displays. The sum is thus 16 or ‘10000’ which is shown by the fifth LED being lit up on the LED bar in the bottom right of the photo."
+    "text": "Results and Discussion\n\nTestbench Simulation\n\n\n\n\n\n\nFigure 4: FSM Simulation\n\n\n\n\n\n\n\n\n\nFigure 5: FSM Decoder Simulation\n\n\n\n\n\n\n\n\n\nFigure 6: Lab 3 Top Simulation\n\n\n\nThe design met all intended objectives. Figure 4 shows the FSM of the design working in simulation. The rows switch as desired and the module handles an input correctly as seen in the image. Figure 5 shows the FSM decoder working as expected. The waves show the signals switching only when the enable signal is 1. Figure 6 shows the top module working as expected, seen by the correct row outputs and the multiplexed display signal.\n\n\nExample of Design\n\nIn addition to working in simulation, the design also worked in reality. The video above shows an example of the circuit working."
   },
   {
-    "objectID": "labs/lab2/lab2.html#conclusion",
-    "href": "labs/lab2/lab2.html#conclusion",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "objectID": "labs/lab3/lab3.html#conclusion",
+    "href": "labs/lab3/lab3.html#conclusion",
+    "title": "Lab 3: Keypad Scanner",
     "section": "Conclusion",
-    "text": "Conclusion\nThe FPGA was used two time multiplex two input signals to drive two seven segment displays in addition to displaying their sum. I spent a total of 12 hours on this lab."
+    "text": "Conclusion\nThe FPGA was used to read the keypad scanner and display the last two digits pressed. I spent a total of 27 hours on this lab."
+  },
+  {
+    "objectID": "posts/third-post.html",
+    "href": "posts/third-post.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "In this week of E155 I have enjoyed having to face a different kind of debugging that debugging software cannot offer. In building my finite state machine for lab 3, I have found difficulty in even what I thought were the more simple tasks of the lab. In my first attempt to move from simulation to hardware for the lab, I found my modules that worked completely as expected in simulation not even show the slightest signs of working in hardware. Although it would have been nice to create a working design for the lab on the first try, I was excited at the opportunity this gave me.\nI feel like in comparing how I have been thinking trying to debug my ciruit for the lab and how I usually think when trying to debug code, I have only found how different the processes are. There is an obvious sense of debugging strategies being resitricted without simple tools such as print statements, and that the goal is to check for function not for a status of function. I have enjoyed so far how these restictions have forced me to restructure my strategies towards debugging."
   },
   {
     "objectID": "posts/first-post.html",
