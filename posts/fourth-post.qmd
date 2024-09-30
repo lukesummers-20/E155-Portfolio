@@ -1,0 +1,10 @@
+---
+title: "Week 4"
+description: "Fourth week reflection"
+author: "Luke Summers"
+date: "9/29/24"
+categories:
+  - reflection
+draft: false
+---
+So far this has been the most I have worked on E155 in a week, but I found the work enjoyable. I was unable to complete lab 3 by Thursday, as in the beginning of the week I found myself struggling to read an input from the column. After about 15 hours of work on the lab, I kind of started over and tried rebuilding a new FSM where I slowly added pieces of functionality. This strategy worked for me as I was able to first pulse the rows correctly, then transfer to a desired state on a button press, and so on. I eventually got to a point where my design could correctly read a button press, but it would not display the numbers correctly on the display. At this point I stopped working on lab 3 and started working on lab 4. I found better luck on lab 4 than I did on lab 3 as I was able to complete the task in much less time. In my design for lab 4 I used the basic timers on the MCU, but I realized I could use the generic timer in a PWM function to generate the square wave which might be more accurate. I plan to use the rest of my time before lab 4 is due to test how accurate my design is and update it to use PWM if necessary. I restarted working on lab 3 today also, and was able to complete it. I found that my design was working as expected, I just needed to slow my clock down. 
