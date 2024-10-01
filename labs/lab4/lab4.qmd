@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "Lab 4: Digital Audio"
 fig-cap-location: bottom
 format:
@@ -13,32 +13,48 @@ format:
 In this lab the MCU was used to drive a small speaker to play short tunes. One of the basic timers on the MCU were used to generate the square wave for the speaker, and the other was used to handle generating the square wave for a certain duration. The design implimented played "Fur Elise" and the melody of "Blue(Da Ba Dee)".
 
 ## Design and Testing Methodology
-The task of driving the two displays was done by using a module to multiplex the switch inputs and then feed this signal into the seven segment display decoder module. The on-board high-speed oscillator was used to produce a clock signal, and then the input multiplexer module would then on every positive edge of the clock switch between outputing each switch signal. This output signal was then inputed into a module that decoded the signal into the corresponding signal to drive the LEDs of the display. This LED display signal was one of the outputs of the FPGA in the circuit. Two enable signals were also output for transistors used to drive the displays.  The sum of the two inputs was calculated in another module and this sum signal was also outputed by the FPGA. A testbench was created for the adder and input multiplexer modules to test their function in QuestaSim. The seven segment display decoder module is from a previous lab where it was already tested and it is unreasonable to test the oscillator signal in simulation. \
-The circuit that was made with the FPGA included the two seven segment displays, five LEDs for the sum, and transistors for driving the seven segment displays. The seven segment displays would draw too much current from the FPGA pin, so a transistor was used to help supply current. Two PNP transistors were used, which were switched on and off by the enable signals to drive displaying either digit. 
+The square wave was generated using one of the basic timers on the MCU. With how the RCC clock configuration register was set, the clock that is fed into the timer was at a frequency of 1 Mhz. This was done by setting bits 4-7 of the RCC_CFGR register to '1001'. The prescaler on the clock was set to 1 as the input clock was already the desired frequency. In order to generate the square wave, the auto reload register of the timer was set so that counter overflow would happen at twice the desired frequency. The square wave was then made by clearing the timers status flag, writing one to the pin, waiting for one period of the clock to have counter overflow, reseting the timer status flag, writing 0 to the pin and waiting for another period of the timer, and then repeating. Since counter overflow will occur at twice the desired frequency, the output pin will have a wave that is at the desired frequency. The other basic timer was then used to output this square wave for the desired duration of time. The prescaler of this timer was set so that the clock frequency of the timer was 1 Khz. With a frequency of 1 KHz the counter of this timer would be incrementing once every millisecond, which means the auto reload register of the timer could be set to the desired number of milliseconds and then the counter overflowing could be used to trigger the stoppage of the square wave. In this way the two timers could be used to generate square waves at specific frequencies for a certain number of milliseconds which was used to drive the speaker. The design was tested by using the oscilliscope to measure the frequency of an output wave to compare it to the desired frequency of the design. The circuit included the MCU, a 
+LM386 audio amplfier, a 8 Ohm speaker, and a potentiometer for volume control. It also used two switches to trigger the playing of each song.
+\ 
+\ 
+ 
+\ 
+\ 
 
-The square wave use generated using one of the basic timers on the MCU. With how the RCC clock configuration register was set, the clock that is fed into the timer was at a frequency of 1 Mhz. This was done by setting bits 4-7 of the RCC_CFGR register to '1001'. The prescaler on the clock was set to 1 as the input clock was already 1 MHz. In order to generate the square wave, the counter register of the timer was set so that counter overflow would happen at twice the desired frequency. The square wave was then made by writing one to the pin, waiting for one period of the clock to have counter overflow, writing 0 to the pin and waiting for another period of the timer, and then repeating. Since counter overflow will occur at twice the desired frequency, the output pin will have a wave that is at the desired frequency. 
+The MCU has an onboard timer that is more robust that could have been used to generate a PWM signal that is connected directly to a pin. In creating the design for this lab, generating a square wave with this method was tested and I found it to be about as accurate as the method I used with two basic timers, so I chose the simplicity of using the basic timer.
 
 ## Technical Documentation:
 The sourcecode for the project can be found in the [Github repository](https://github.com/lukesummers-20/e155-lab4).
 
 ### Schematic
-![Schematic](images/schematic.jpg){#fig-sch}
+![Schematic](images/schematic.jpeg){#fig-sch}
 
-@fig-sch shows the circuit for the design. The LEDs were connected to current limiting resistors of 100 $\Omega$. These resistor values were solved for by solving for R in V = IR with the voltage found from the part data sheets and a desired current of around 8 mA found from the FPGA data sheet. With voltages of 1.2 and 1.3, 100 $\Omega$ resistors gave a current slightly above 8 mA. The same calculation was done using 3.3V to find the resistance of the resistors for the transistor base signal. 
+@fig-sch shows the circuit for the design. 
+
+### Calculations
+![Frequency Accuracy](images/acc.jpeg){#fig-acc}
+
+@fig-acc shows the calculations done for the accuracy of the design at outputing a wave in the range of 220 Hz to 1000 Hz. Since the design is within the standard for 220 Hz and 1000 Hz, it will be within the standard for all frequencies in between.
+
+![Frequency and Duration Range](images/range.jpeg){#fig-ran}
+
+@fig-ran shows the calculations done for the frequency and duration ranges. The minimum duration is 0 ms and the maximum is just the maximum that the ARR can be set to, which is 65,535 because the ARR has 16 accessible bits. Thus the maximum duration supported is 65.545 seconds. The design could be changed to increase this value by changing the clock frequency of the timer. The design supports a freqency of 0, but that just outputs nothing. The minimum frequency it can generate is 7.6 Hz, as the ARR can be set to 65,535 which would produce counter overflow at 15.2 Hz. The output frequency would then be 7.6 Hz. The maximum is just the timer clock frequency which is 1 Mhz. The timer clock frequency could be changed to achieve frequencies outside of this range if desired.
 
 ## Results and Discussion
 
-### Testbench Simulation
-![Adder Testbench](images/lab2_adder_tb.jpg){#fig-l2a}
+## Oscilliscope Reading
+![Oscilliscope Reading for 220 Hz](images/f220.PNG){#fig-osc}
 
-![Input Multiplexer Testbench](images/lab2_inputMultiplexer_tb.jpg){#fig-l2im}
+@fig-osc shows an oscilliscope reading of the output pin when trying to output a 220 Hz signal. The ARR was set to 2272 so that counter overflow would occur at twice the desired frequency, as the design would toggle the pin at half of the frequency of counter overflow. Due to the system not being to function instantaneously the output signal was a little slower than desired but within the requirements.
 
-The design met all intended objectives. @fig-l2a shows the signals produced by the testbench for the adder module. The expected output is the same as the output, so the adder module was succesful in simulation. @fig-l2im shows the signals produced by the testbench for the input multiplexer module. The output signals replicate the expected output signals as the clock cycles, showing this module succesfully multiplexes the signals in simulation. 
+![Oscilliscope Reading for 1000 Hz](images/f1k.PNG){#fig-osc}
 
-### Example of Seven Segment Displays
-![Display Example](images/display.jpg){#fig-dis}
+@fig-osc shows an oscilliscope reading of the output pin when trying to output a 1000 Hz signal. The ARR was set to 500 so that counter overflow would occur at twice the desired frequency, as the design would toggle the pin at half of the frequency of counter overflow. 
 
-In addition to working in simulation, the design also worked in reality. @fig-dis shows an example of the circuit working. Both switches were inputing '1000', which is 8 as seen on the two seven segment displays. The sum is thus 16 or '10000' which is shown by the fifth LED being lit up on the LED bar in the bottom right of the photo.
+### Example of Design
+
+{{< video https://youtu.be/G12IxMqSP00 >}}
+The video above shows the design playing both of the desired songs, along with the potentiometer being used to control the volume.
 
 ## Conclusion
-The FPGA was used two time multiplex two input signals to drive two seven segment displays in addition to displaying their sum. I spent a total of 12 hours on this lab. -->
+The MCU's on board timers were used to generate certain frequencies of square waves for certain durations in order to drive a small speaker. I spent a total of 10 hours on this lab.
