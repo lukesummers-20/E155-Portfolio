@@ -1,0 +1,10 @@
+---
+title: "Week 5"
+description: "Fifth week reflection"
+author: "Luke Summers"
+date: "10/7/24"
+categories:
+  - reflection
+draft: false
+---
+Last week our in class work focused on PCB design, and I found this very interesting as this was my first exposure to the subject and I always wondered how a circuit could be made into a PCB. I have had slight exposure to using CAD for modeling designs in E4, and this process felt similar to that. I enjoyed it as it felt nice to have to think in a slightly more creative manner in comparison to the type of thinking required for the labs. Because I would only ever need to design a PCB for a design that I know is succesful, I feel as if the design of the PCB would be a reward. The hardest thinking of the project would be over, and all that is left would be the fun part of deciding the best way to arrange things. Looking towards the final project, this makes me excited at the possibility of thinkging of a design where I would need to design a PCB for it.
