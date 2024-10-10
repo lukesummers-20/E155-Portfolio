@@ -11,4 +11,4 @@ In this week of E155 I learned to gain a kind of joy from reading the MCU refere
 \ 
 \ 
 
-In class we reviewed/learned about SPI, UART, and IoT. 
+In class we reviewed/learned about SPI and UART. It was nice to get back into these topics, and starting to think about them caused excitement within me for getting to learn how to use them in the upcoming labs. I also started thinking about my final project with my partner more this week, and I am already very excited with our idea. We plan to make a chess board that lights up the squares a piece can move to if you pick it up. There are other functionalities like making the board light up squares with a capturable piece red, and if we find early success maybe even something like a game tracker, where the board tracks the game and can say who won and lost. A cool very big stretch idea Prof. Brake had was to somehow find an embedded chess computer and then interface the board with it so that one could play the chess computer by making moves and then having the board light up the computers desired move. This is probably out of the scope of our final project, but would be a cool idea to return to in the future.
