@@ -163,42 +163,42 @@
   {
     "objectID": "labs/lab5/lab5.html",
     "href": "labs/lab5/lab5.html",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "",
     "text": "In this lab the MCU was used to drive a quadrapture encoder that was used to read the speed of a brushed DC motor. The advanced timer of the MCU was used in encoder interface mode to keep track of the position of the motor and a basic timer was used to generate an interrupt every 0.25 seconds that was used to track the change in position over the 0.25 seconds. A speed could then be calculated and averaged with the previous two speed to produce a speed reading. The design was succesful in reading the speed of the motor and displaying it."
   },
   {
     "objectID": "labs/lab5/lab5.html#introduction",
     "href": "labs/lab5/lab5.html#introduction",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "",
     "text": "In this lab the MCU was used to drive a quadrapture encoder that was used to read the speed of a brushed DC motor. The advanced timer of the MCU was used in encoder interface mode to keep track of the position of the motor and a basic timer was used to generate an interrupt every 0.25 seconds that was used to track the change in position over the 0.25 seconds. A speed could then be calculated and averaged with the previous two speed to produce a speed reading. The design was succesful in reading the speed of the motor and displaying it."
   },
   {
     "objectID": "labs/lab5/lab5.html#design",
     "href": "labs/lab5/lab5.html#design",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "Design",
     "text": "Design\nIn encoder interface mode, the advanced timer can take inputs from pins on two channels that control the timer counter. The quadrapture encoder will send out two slightly offset waves when the motor is spinning, and when the motor switches direction the signal that was second becomes the first signal and vice versa. The timer counts up while the two input signals coming in are slightly offset, and counts down when they are slightly offset in the other direction. If the motor is not moving or oscillating short amounts, the counter stops or oscillates slightly. Thus, the counter of the timer keeps track of the motor position. This means that while we have the encoder connected to a timer in encoder mode, the counter of the timer represents the motors position, with the position of the motor when the counter starts counting being the relative zero. This can be used to find the motors speed because another timer can be used to generate an interupt every 0.25 seconds, and the handler of the interrupt can capture the counter value of the encoder timer. Using an interrupt for this task as opposed to manually polling is far more accurate. When the interupt occurs, the process is halted and the ISR takes over. This means that there will be less latency between when 0.25 seconds has passed and when the counter value is captured than if polling was used, as if polling was used then if the end of the 0.25 seconds was not at a time when the MCU was checking the timers status, then the counter value captured would be from slightly after the 0.25 seconds was over. Because the MCU can transfer control to the ISR once the counter overflows, the counter value is a lot more accurate to the 0.25 second mark. Everytime a new value is captured, the distance moved in the last 0.25 seconds could be calculated and then used to calculate a new speed, which was then averaged with the previous two speeds to produce the final motor speed reading. This could then be displayed to the standard output terminal. The circuit consisted of the MCU and the motor. The quadraptur encoder was drivin by the +5V pin on the MCU and the signals were input to pins A8 and A9. The motor was driven by a power supply as the MCU does not produce enough current to drive it."
   },
   {
     "objectID": "labs/lab5/lab5.html#technical-documentation",
     "href": "labs/lab5/lab5.html#technical-documentation",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "Technical Documentation:",
     "text": "Technical Documentation:\nThe sourcecode for the project can be found in the Github repository.\n\nFlow Chart\n\n\n\n\n\n\nFigure 1: Signal Flow Chart\n\n\n\nFigure 1 shows the flow chart for the program control of the design. After the set up steps for the peripherals are completed, the main loop checks if the update variable is set as 1. If it is set, then it calculates the speed, displays it, and resets the update variable to 0. If it is not set, it does nothing. When a counter overflow interrupt occurrs in the timer used to measure the time step, control is transfered from the main loop to the timer 7 interrupt service routine, which just captures the motor position and direction and sets the update variable to 1. Control is then transfered back to the main loop.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic\n\n\n\nFigure 2 shows the circuit for the design.\n\n\nCalculations\nThe distance calculation was done by subtracting the position 0.25 seconds ago from the current posiiton, and then adding a loop offset if necessary. Because the position value eventually has to loop back around to 0, if the encoder timer’s counter value resets to zero within the time step an offset has to be added to account for this. If the counter is upcounting and this occurrs, than the loop offset is added to the distance value and if the counter was downcounting when this occurrs the loop offset is subtracted. The loop offset value is just the maximum value of the counter. The speed was then calculated by dividing the distance by 0.25 seconds. Since the distance is directly calculated by timer values, the result will be in the units of timer counts per second. In order to get this in revolutions per second, the value is divided by the number of counts per rotation. The motor creates 120 pulses per rotation, and the timer will count for both falling and rising edges of both signals so after the counter counts 480 times, the motor has completed one rotation. After dividing the speed by 480 it is the speed of the motor in revolutions per second. The speed was then continually averaged with the previous two for the final speed."
   },
   {
     "objectID": "labs/lab5/lab5.html#results-and-discussion",
     "href": "labs/lab5/lab5.html#results-and-discussion",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "Results and Discussion",
     "text": "Results and Discussion\n\nExample of Design\n\nThe design was succesfull in acheiving its desired functionality. The video above shows the design reading the speed of the motor at various voltages. The design becomes more accurate as the speed is slowed, but is still accurate to around the tenth of a rotation per second through a +20V input. The good accuracy of the reading is due to the position counter incrementing 4 timers per motor pulse, which increases the accuracy of the position reading 4 fold. With a more accurate position reading that is read as close to the 0.25 second time step mark as possible, the resulting speed calulated is also very accurate. When the direction of the motor was switched, the design succesfully displayed a negative speed."
   },
   {
     "objectID": "labs/lab5/lab5.html#conclusion",
     "href": "labs/lab5/lab5.html#conclusion",
-    "title": "Lab 5: Digital Audio",
+    "title": "Lab 5: Interrupts",
     "section": "Conclusion",
     "text": "Conclusion\nThe MCU succesfully read a quadrapture encoder to read the speed of the connected motor. I spent 13 hours on this lab."
   },
