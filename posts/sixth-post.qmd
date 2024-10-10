@@ -1,0 +1,14 @@
+---
+title: "Week 6"
+description: "Sixth week reflection"
+author: "Luke Summers"
+date: "10/7/24"
+categories:
+  - reflection
+draft: false
+---
+In this week of E155 I learned to gain a kind of joy from reading the MCU reference manual. Upon first starting to think about the lab, I thought of various different ways to use the encoder signals to measure the speed. I realized that the main task boiled down to using the encoder signals to track the distance the motor traveled, and using a timer to create time intervals to check the distance to get a speed. I spent a majority of the time on the lab reading through the reference manual, especially in the advanced timer (timer 1) section. I ended up using the advanced timer in encoder mode, but some other options I considered were using timers in input captur mode to track the time between each signal or using a timer with the input exclusive, turned on to track the offset in time between the signals, or using the external interrupts in the MCU to create interrupts on the encoder signals. I ended up choosing the encoder mode method because this mode converted the timers counter value basically into a position for the motor if configured correctly. The counter also counted on bothing falling and rising edges of both signals, so there were four counts for every 1 encoder pulse. This meant the positional resolution on the motor was four times higher than tracking position by every encoder pulse. I also feel like another benefit of this method was being able to use another timer to track timer, and only access this position value on interrupts. This means that while the motor is running, the position timer will count and track the position regardless of what the cpu is doing, such as calculating a new speed or displaying it. The second timer will create an interrupt every 0.25 seconds, and thus the position can be read as close to 0.25 seconds as possible. Thus the distance tracking, time tracking, and speed calculations/handling can be done more simultaneously, which increases the accuracy of the two time dependent tasks. 
+\ 
+\ 
+
+In class we reviewed/learned about SPI, UART, and IoT. 
