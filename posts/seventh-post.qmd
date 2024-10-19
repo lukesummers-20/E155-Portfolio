@@ -1,0 +1,10 @@
+---
+title: "Week 7"
+description: "Seventh week reflection"
+author: "Luke Summers"
+date: "10/18/24"
+categories:
+  - reflection
+draft: false
+---
+This week of microps I mainly focused on my final project proposal with my partner. It is exciting to know have a solidified plan for the final project because it feels a lot more achievable then before. We found an individually addresable RGB LED strip in our lab that we can use for our project, and this will allow us to not only reduce the number of pins required to drive the board LEDs but also light up each square a different color with a single LED. I am excited about this because being able to use different colors this easily will make tasks such as lighting up squares in different colors much simpler than if individual LEDs were used. I anticipate my biggest struggle with the project being interfacing with the hall sensors to detect piece movement. The current lab we are working on uses SPI and we plan to use SPI to send the column data from the FPGA to the MCU in our design, so I still feel unsure about my abilities to use SPI in the most effective way. Based on how the class has gone so far, I expect after finishing the SPI lab to feel more confident about what I need to do for the project. I also do not have any experience using a DAC to play audio, so this could also be a source of struggle but I do not anticipate this being too complex. 
