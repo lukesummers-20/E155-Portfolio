@@ -1,0 +1,10 @@
+---
+title: "Lab 6 Reflection"
+description: "Lab 6 Reflection"
+author: "Luke Summers"
+date: "11/19/24"
+categories:
+  - reflection
+draft: false
+---
+I think lab 6 was a good experience for me because it stressed to me the importance of attention to details. I would say it was probably the least logical thinking inducing lab, as most of it was just setting up an SPI transaction correctly. I did incur a fair amount of struggle time, mainly due to the head of the logic analyzer cable being finicky and not being precise about my breadboarded circuit. For a while, I was failing to get any output from the temperature chip showing on the oscilliscope. This was fixed by simply changing the pins on the logic analyzer head that I was using, which was bittersweet to find out. It was nice to know I was not going crazy and that the code was doing what I thought it was doing, and a less in magnitude amount of frustrating to have spent so much time trying to fix the issue without just trying new pins. After that, there was some point where the wires on my breadboard became unplugged and when I plugged the CIPO wire back in, I did so into pin 6 and not pin A6. This caused me to not be capturing the value on the MCU, even when I could see it on the logic analyzer. I was overall glad after this experience, as I do not think I will ever again make these same mistakes. Prior to this lab, I had not felt stuck in the same way I did during this lab so it was nice to be given an experience that will serve as a constant reminder to be precise about what I am doing.

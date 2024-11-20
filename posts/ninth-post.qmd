@@ -1,0 +1,10 @@
+---
+title: "Lab 7 Reflection"
+description: "Lab 7 Reflection"
+author: "Luke Summers"
+date: "11/19/24"
+categories:
+  - reflection
+draft: false
+---
+I was a little bit sad at the completion of this lab, as it marked the last of my lab work in E155. In the closing hours of my work on the lab, I was forced to reflect on my transformation as I completed each of the labs and see how far I have progressed. Over the past summer, I had fears of my ability to do this course so it was reassuring to be able to see that I could. I think a funny paradox about this lab was to me it was the most intellectually satisfying, but it produced the most lackluster result. The results of the lab were testbenches running successfully for simulation and a light on the development board lighting up to signify success in hardware. In comparison to the outputs of some of the other labs, this was pretty boring. Comparing this output to the task completed in the lab highlights the paradox, as I think this was the coolest lab we have done as it was dealing with a protocol that in this day and age affects so much of the population. It was also cool to see the MCU and FPGA interface with each other, as all the previous labs dealt solely with the FPGA or MCU. I think completing this lab has made me more excited for the final project, as I feel like it confirms I have at least some capabilities in digital design and thus has given me confidence about the project.
