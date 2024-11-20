@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Luke Summers">
+<meta name="dcterms.date" content="2024-11-19">
+<meta name="description" content="Lab 6 Reflection">
 
-<title>E155 Blog – E155 Portfolio</title>
+<title>Lab 6 Reflection – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,7 +81,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">E155 Portfolio</span>
     </a>
   </div>
@@ -149,11 +92,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -162,31 +105,31 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="./labs/lab1/lab1.html">
+    <a class="dropdown-item" href="../labs/lab1/lab1.html">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab2/lab2.html">
+    <a class="dropdown-item" href="../labs/lab2/lab2.html">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab3/lab3.html">
+    <a class="dropdown-item" href="../labs/lab3/lab3.html">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab4/lab4.html">
+    <a class="dropdown-item" href="../labs/lab4/lab4.html">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab5/lab5.html">
+    <a class="dropdown-item" href="../labs/lab5/lab5.html">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab6/lab6.html">
+    <a class="dropdown-item" href="../labs/lab6/lab6.html">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./labs/lab7/lab7.html">
+    <a class="dropdown-item" href="../labs/lab7/lab7.html">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
@@ -214,14 +157,34 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">E155 Blog</h1>
-</div>
+<h1 class="title">Lab 6 Reflection</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">reflection</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Lab 6 Reflection
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luke Summers </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 19, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -231,297 +194,11 @@ window.Quarto = {
 </header>
 
 
+<p>I think lab 6 was a good experience for me because it stressed to me the importance of attention to details. I would say it was probably the least logical thinking inducing lab, as most of it was just setting up an SPI transaction correctly. I did incur a fair amount of struggle time, mainly due to the head of the logic analyzer cable being finicky and not being precise about my breadboarded circuit. For a while, I was failing to get any output from the temperature chip showing on the oscilliscope. This was fixed by simply changing the pins on the logic analyzer head that I was using, which was bittersweet to find out. It was nice to know I was not going crazy and that the code was doing what I thought it was doing, and a less in magnitude amount of frustrating to have spent so much time trying to fix the issue without just trying new pins. After that, there was some point where the wires on my breadboard became unplugged and when I plugged the CIPO wire back in, I did so into pin 6 and not pin A6. This caused me to not be capturing the value on the MCU, even when I could see it on the logic analyzer. I was overall glad after this experience, as I do not think I will ever again make these same mistakes. Prior to this lab, I had not felt stuck in the same way I did during this lab so it was nice to be given an experience that will serve as a constant reminder to be precise about what I am doing.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="reflection" data-listing-date-sort="1732003200000" data-listing-file-modified-sort="1732062661807" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278">
-<div class="thumbnail">
-<p><a href="./posts/eigth-post.html" class="no-external"></a></p><a href="./posts/eigth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/eigth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/eigth-post.html" class="no-external">Lab 6 Reflection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/eigth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/eigth-post.html" class="no-external">Lab 6 Reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/eigth-post.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="reflection" data-listing-date-sort="1732003200000" data-listing-file-modified-sort="1732063621747" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="226">
-<div class="thumbnail">
-<p><a href="./posts/tenth-post.html" class="no-external"></a></p><a href="./posts/tenth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/tenth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/tenth-post.html" class="no-external">Project Reflection 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/tenth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/tenth-post.html" class="no-external">First Reflection on Project Work</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/tenth-post.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="reflection" data-listing-date-sort="1732003200000" data-listing-file-modified-sort="1732063157058" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="252">
-<div class="thumbnail">
-<p><a href="./posts/ninth-post.html" class="no-external"></a></p><a href="./posts/ninth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/ninth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ninth-post.html" class="no-external">Lab 7 Reflection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/ninth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/ninth-post.html" class="no-external">Lab 7 Reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/ninth-post.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="reflection" data-listing-date-sort="1729234800000" data-listing-file-modified-sort="1729312829382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
-<div class="thumbnail">
-<p><a href="./posts/seventh-post.html" class="no-external"></a></p><a href="./posts/seventh-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/seventh-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/seventh-post.html" class="no-external">Week 7</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/seventh-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/seventh-post.html" class="no-external">Seventh week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/seventh-post.html" class="no-external">
-<div class="listing-date">
-Oct 18, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="reflection" data-listing-date-sort="1728284400000" data-listing-file-modified-sort="1728604677469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
-<div class="thumbnail">
-<p><a href="./posts/sixth-post.html" class="no-external"></a></p><a href="./posts/sixth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/sixth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/sixth-post.html" class="no-external">Week 6</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/sixth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/sixth-post.html" class="no-external">Sixth week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/sixth-post.html" class="no-external">
-<div class="listing-date">
-Oct 7, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="reflection" data-listing-date-sort="1728284400000" data-listing-file-modified-sort="1728359178302" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
-<div class="thumbnail">
-<p><a href="./posts/fifth-post.html" class="no-external"></a></p><a href="./posts/fifth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/fifth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fifth-post.html" class="no-external">Week 5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fifth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/fifth-post.html" class="no-external">Fifth week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/fifth-post.html" class="no-external">
-<div class="listing-date">
-Oct 7, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="reflection" data-listing-date-sort="1727593200000" data-listing-file-modified-sort="1727663192856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="267">
-<div class="thumbnail">
-<p><a href="./posts/fourth-post.html" class="no-external"></a></p><a href="./posts/fourth-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/fourth-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fourth-post.html" class="no-external">Week 4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fourth-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/fourth-post.html" class="no-external">Fourth week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/fourth-post.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="reflection" data-listing-date-sort="1726815600000" data-listing-file-modified-sort="1726890368329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
-<div class="thumbnail">
-<p><a href="./posts/third-post.html" class="no-external"></a></p><a href="./posts/third-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/third-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/third-post.html" class="no-external">Week 3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/third-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/third-post.html" class="no-external">Third week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/third-post.html" class="no-external">
-<div class="listing-date">
-Sep 20, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="reflection" data-listing-date-sort="1726210800000" data-listing-file-modified-sort="1726274975975" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="282">
-<div class="thumbnail">
-<p><a href="./posts/second-post.html" class="no-external"></a></p><a href="./posts/second-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/second-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/second-post.html" class="no-external">Week 2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/second-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/second-post.html" class="no-external">Second week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/second-post.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="reflection" data-listing-date-sort="1725606000000" data-listing-file-modified-sort="1725674354434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="215">
-<div class="thumbnail">
-<p><a href="./posts/first-post.html" class="no-external"></a></p><a href="./posts/first-post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/first-post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/first-post.html" class="no-external">Week 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/first-post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/first-post.html" class="no-external">First week reflection</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/first-post.html" class="no-external">
-<div class="listing-date">
-Sep 6, 2024
-</div>
-<div class="listing-author">
-Luke Summers
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
