@@ -12,6 +12,6 @@ about:
           href: https://github.com/lukesummers-20
 ---
 
-Luke Summers is a fourth year computer science major at Harvey Mudd College. 
+Luke Summers is a fourth year computer science major at Harvey Mudd College. This website summarizes my work in ENGR155 Microprocessor Based Systems: Design and Application.
 
 Final project for class can be found [here](https://maxdesomma.github.io/knight-light-portfolio/).
